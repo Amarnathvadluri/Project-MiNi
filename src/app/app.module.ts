@@ -9,7 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{ HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
-import { EmployeesComponent } from './employees/employees.component'
+import { EmployeesComponent } from './employees/employees.component';
+import { PackagePipe } from './package.pipe'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EmployeesComponent } from './employees/employees.component'
     DashboardComponent,
     HomeComponent,
     CreateComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    PackagePipe
   ],
   imports: [
     BrowserModule,

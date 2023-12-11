@@ -54,7 +54,7 @@
             <td>{{employee.name}}</td>
             <td>{{employee.Company}}</td>
             <td>{{employee.role}}</td>
-            <td class="package" [ngStyle]= "{'background-color': employee.package>=9 ? 'green' : 'red' }">{{employee.package}}</td>
+            <td class="package" [ngStyle]= "{'background-color': employee.package>=9 ? 'green' : 'red' }">{{employee.package |package}}</td>
             <td> {{employee.email}}</td>
             <td>{{employee.dob}}</td>
             <td>{{employee.address.addressLine}},{{employee.address.city}},{{employee.address.state}},{{employee.address.pincode}}
