@@ -1,13 +1,13 @@
 label{
 
     display: inline-block;
-    height: 15%;
-    width: 10%;
-    margin-bottom: 10px;
+    width: 120px;
+    margin-bottom: 20px;
+    padding-left: 450px;
+    margin-top: 20px;
+    font-weight: 900;
 }
-form{
-    text-align: center;
-}
+
 h1{
     text-align: center;
 }
@@ -16,4 +16,13 @@ h1{
 }
 button{
     background-color: rgb(80, 156, 213);
+   margin-left: 450px;
+
+}
+.gender{
+    padding-left: 0px;
+ 
+}
+.wfo{
+    padding: 0 !important;
 }

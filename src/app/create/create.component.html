@@ -11,11 +11,11 @@
         <br><br>
 
 
-        <label >Gender</label>
-        <input type="radio" name="gender" formControlName="gender">
-        <label for="">Male</label>
-        <input type="radio" name="gender" formControlName="gender">
-        <label for="">Female</label>
+        <label  >Gender</label>
+        <input type="radio" name="gender" formControlName="gender" value="male">
+        <label  class="gender" for="">Male</label>
+        <input type="radio" name="gender" formControlName="gender" value="female">
+        <label  class="gender" for="">Female</label>
         <br>
 
 
@@ -74,7 +74,7 @@
                     <input type="number" formControlName="percentage" placeholder="Enter percentage">
                     <br><br>
 
-                    <button (click)="delete(i)">delete</button>
+                    <button (click)="delete(i)">Delete</button>
                     <br><br>
                     <hr>
                 </div>
@@ -84,9 +84,9 @@
 
         <label>Work Mode</label>
         <input type="radio" name="type" formControlName="workMode" value="workFromOffice">
-        <label>Work from office</label>
+        <label class="wfo">Work from office</label>
         <input type="radio" name="type" formControlName="workMode" value="remote">
-        <label>Remote</label>
+        <label class="wfo">Remote</label>
         <br><br>
 
         <div *ngIf="employeeForm.get('workMode')?.value=='workFromOffice'">

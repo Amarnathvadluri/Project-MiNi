@@ -6,11 +6,11 @@
 
 }
 .left{
-    
+    color: white;
     width: 20%;
     height: 100%;
     overflow: auto;
-    background-color: aquamarine;
+    background-image: url("https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg?w=996&t=st=1702295073~exp=1702295673~hmac=c4d1bf0053f6f7e0f24e8c43264ae58c469e8ae320193afee51d10b40b8c5166");
     border-radius: 10px;
 }
 .right{
@@ -19,7 +19,7 @@
     background-image: url("https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?w=900&t=st=1702289268~exp=1702289868~hmac=58190c8429c605ef352ea675c43a6b59d35c7cce99c5456332ef51f431279f7d");
     background-size: cover;
     overflow: auto;
-    
+
 }
 .dashboard{
     padding-top: 20px;
@@ -28,7 +28,7 @@ h1{
     padding-left: 20px;
 }
 h1:hover{
-    background-color: aliceblue;
+    background-color: rgb(12, 74, 128);
     cursor: pointer;
     border-radius: 10px;
 }
