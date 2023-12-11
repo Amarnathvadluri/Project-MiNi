@@ -1,0 +1,16 @@
+<!-- <p>login works!</p> -->
+
+
+<div class="parent">
+    <h1>Employee Database</h1>
+    <form [formGroup]="loginForm" >
+        
+        <label >Email:</label>
+        <input type="text" placeholder="Enter your email" formControlName="email" >
+        <br>
+        <label >Password:</label>
+        <input type="password" placeholder="Enter your password" formControlName="password">
+        <br>
+        <button (click)="login()">Login</button>
+    </form>
+</div>

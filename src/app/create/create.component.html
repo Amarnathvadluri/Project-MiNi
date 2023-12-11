@@ -1,0 +1,109 @@
+<div class="title">
+    <h1>Create Employee Form</h1>
+    <br>
+</div>
+
+<div class="employeeForm">
+    <form [formGroup]="employeeForm">
+        <label>Name</label >
+       
+        <input type="text" formControlName="name" placeholder="Enter Name">
+        <br><br>
+
+
+        <label >Gender</label>
+        <input type="radio" name="gender" formControlName="gender">
+        <label for="">Male</label>
+        <input type="radio" name="gender" formControlName="gender">
+        <label for="">Female</label>
+        <br>
+
+
+        <label>Company name</label>
+     
+        <input type="text" formControlName="company" placeholder="Enter company  Name">
+        <br><br>
+        <label>Employee Role</label>
+       
+        <input type="text" formControlName="role" placeholder="Enter Role">
+        <br><br>
+        <label>Package</label>
+       
+        <input type="number" formControlName="package" placeholder="Enter package">
+        <br><br>
+        <label>Email</label>
+        
+        <input type="email" formControlName="email" placeholder="Enter email">
+        <br><br>
+        <label>Date of birth</label>
+       
+        <input type="month" formControlName="dob" placeholder="Enter month">
+        <br><br>
+
+        <div formGroupName="address">
+            <label>Address Line</label>
+            
+            <input type="text" formControlName="addressLine" placeholder="Enter address">
+            <br><br>
+            <label>City</label>
+           
+            <input type="text" formControlName="city" placeholder="Enter city">
+            <br><br>
+            <label>State</label>
+           
+            <input type="text" formControlName="state" placeholder="Enter state">
+            <br><br>
+            <label>Pincode</label>
+           
+            <input type="number" formControlName="pincode" placeholder="Enter pincode">
+            <br><br>
+        </div>
+
+        <button (click)="add()">Add</button>
+        <br>
+
+        <div formArrayName="hikes">
+            <div *ngFor="let hike of hikesFormArray.controls; let i = index">
+                <div formGroupName="{{i}}">
+                    <label for="">Year</label>
+                    
+                    <input type="number" formControlName="year" placeholder="Enter year">
+                    <br><br>
+                    <label for="">Percentage</label>
+                 
+                    <input type="number" formControlName="percentage" placeholder="Enter percentage">
+                    <br><br>
+
+                    <button (click)="delete(i)">delete</button>
+                    <br><br>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <label>Work Mode</label>
+        <input type="radio" name="type" formControlName="workMode" value="workFromOffice">
+        <label>Work from office</label>
+        <input type="radio" name="type" formControlName="workMode" value="remote">
+        <label>Remote</label>
+        <br><br>
+
+        <div *ngIf="employeeForm.get('workMode')?.value=='workFromOffice'">
+            <label for="">Travel Fee</label>
+            <br>
+            <input type="number" formControlName="travelFee">
+            <br><br>
+        </div>
+
+        <div *ngIf="employeeForm.get('workMode')?.value=='remote'">
+            <label for="">Wifi Bill</label>
+            <br>
+            <input type="number" formControlName="WifiBill">
+            <br><br>
+        </div>
+
+        <button (click)="submit()">submit</button>
+          
+    </form>
+</div>

@@ -1,0 +1,76 @@
+<!-- <p>employees works!</p> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<input type="text" placeholder="search" (keypress)="getFilteredEmployees()" [(ngModel)]="term">
+
+<br>
+<label for="">Colunm</label>
+<select [(ngModel)]="column">
+    <option>package</option>
+    <option>name</option>
+</select>
+
+<label for="">Order</label>
+<select [(ngModel)]="order">
+    <option value="asc" >Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<button (click)="sort()">sort </button>
+<select [(ngModel)]="pageno">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select>
+<button (click)="page()">Page</button>
+
+
+<table border="1"  class="table table-dark table-hover">
+    <thead >
+        <tr>
+            <th >id</th>
+            <th>name</th>
+            <th>company</th>
+            <th>role</th>
+            <th>package</th>
+            <th>email</th>
+            <th>dob</th>
+            <th>address</th>
+            <th>hikes</th>
+            <th>workMode</th>
+            <th>TravellBill</th>
+            <th>WifiBill</th>
+            <th>Actions</th>
+        
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.Company}}</td>
+            <td>{{employee.role}}</td>
+            <td class="package" [ngStyle]= "{'background-color': employee.package>=9 ? 'green' : 'red' }">{{employee.package}}</td>
+            <td> {{employee.email}}</td>
+            <td>{{employee.dob}}</td>
+            <td>{{employee.address.addressLine}},{{employee.address.city}},{{employee.address.state}},{{employee.address.pincode}}
+            </td>
+            <td>
+        <tr *ngFor="let value of employee.hikes">
+            <td>{{value.year}}</td>
+            <td>{{value.percentage}}</td>
+        </tr>
+        </td>
+        <td>{{employee.workMode}}</td>
+        <td>{{employee.travelBill}}</td>
+        <td>{{employee.WifiBill}}</td>
+        <td>
+            <button  white (click)="delete(employee.id)">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+</table>

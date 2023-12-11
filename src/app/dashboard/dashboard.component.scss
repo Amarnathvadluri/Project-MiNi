@@ -1,0 +1,39 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+   
+
+}
+.left{
+    
+    width: 20%;
+    height: 100%;
+    overflow: auto;
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+.right{
+   width:80%;
+   height: 100%;
+    background-color: rgb(202, 227, 210);
+    overflow: auto;
+}
+.dashboard{
+    padding-top: 20px;
+}
+h1{
+    padding-left: 20px;
+}
+h1:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+    border-radius: 10px;
+}
+hr{
+
+    color: black;
+}
+button{
+   margin-left: 100px;
+}
